@@ -1,0 +1,28 @@
+production:
+  sessions:
+    default:
+      database: bs_production
+      hosts:
+        - localhost:27017
+      options:
+  options:
+
+development:
+  sessions:
+    default:
+      database: bs_development
+      hosts:
+        - localhost:27017
+      options:
+  options:
+
+test:
+  sessions:
+    default:
+      database: bs_test
+      hosts:
+        - localhost:27017
+      options:
+        read: primary
+        max_retries: 1
+        retry_interval: 0
