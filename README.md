@@ -1,7 +1,8 @@
 I use MongoDB, Mongoid, Rails and EmberJS.
 
 
-How it works:
+How it works
+------------
 
 app - Ember-Cli app
 api - Rails API
@@ -15,6 +16,17 @@ cd api && ln -s ../app/dist public # links ember compiled version with rails pub
 Hope it helps.
 
 
+Required
+--------
+
+1. You need MongoDB running
+2. You need to RVM to install rails env (www.rvm.io)
+3. You need Ember-Cli installed (www.ember-cli.com)
+
+
+
+Optional
+--------
 
 Optional 1: Configure Content Security Policy
 
