@@ -1,7 +1,15 @@
 class Api::PostsController < Api::BaseController
 
   def index
-    render text: '{"posts":[{"id":"1","title":"tere"}]}', status: "200"
+    posts = {
+      posts: [
+        {
+          id: DateTime.now,
+          title: "tere"
+        }
+      ]
+    }
+    render json: posts, status: "200"
   end
 
 end
