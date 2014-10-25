@@ -6,6 +6,6 @@ Rails.application.routes.draw do
     end
   end
 
-  #get '*path', to: "pages#show", format: false
+  get '*path', to: "pages#show", format: false
 
 end
