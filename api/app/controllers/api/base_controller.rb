@@ -1,8 +1,15 @@
  class Api::BaseController < ActionController::Base
 
-  before_action :set_access_control_allow_origin
+  respond_to :json, :html
 
-  def set_access_control_allow_origin
+  before_action :set_request_headers
+  before_action :set_response_headers
+
+  def set_request_headers
+    request.format = "json"
+  end
+
+  def set_response_headers
     response.headers["Access-Control-Allow-Origin"] = "*"
   end
 

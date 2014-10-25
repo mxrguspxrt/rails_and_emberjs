@@ -8,7 +8,7 @@ class Post
   belongs_to :creator, class_name: "User"
   has_many :comments, class_name: "Comment"
 
-  validates :creator, presence: true
+  #validates :creator, presence: true
   validates :title, presence: true
   validates :body, presence: true
 

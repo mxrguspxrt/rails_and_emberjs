@@ -1,15 +1,10 @@
 class Api::PostsController < Api::BaseController
 
   def index
-    posts = {
-      posts: [
-        {
-          id: DateTime.now,
-          title: "tere"
-        }
-      ]
-    }
-    render json: posts, status: "200"
+    Post.create(title: DateTime.now, body: "This is content")
+
+    @models = Post.all
+    respond_with(@models)
   end
 
 end

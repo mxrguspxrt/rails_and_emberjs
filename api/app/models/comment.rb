@@ -9,6 +9,6 @@ class Comment
   belongs_to :post, class_name: "Post"
 
   validates :body, presence: true
-  validates :commenter_name, unless: :creator
+  validates :commenter_name, presence: true, unless: :creator
 
 end
